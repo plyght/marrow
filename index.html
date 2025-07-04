@@ -3,22 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marrow - Waitlist</title>
+    <title>Marrow</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Marrow</h1>
-        <p>Join the waitlist</p>
-        
-        <div id="user-count">Loading...</div>
-        
-        <form id="waitlist-form">
-            <input type="email" id="email" placeholder="Enter your email" required>
-            <button type="submit">Join Waitlist</button>
-        </form>
-        
-        <div id="message"></div>
+        <!-- Header with Text Logo -->
+        <header class="header">
+            <div class="logo-container">
+                <img src="/Marrow-text.svg" alt="Marrow" class="logo">
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="tagline">
+                <span class="mixed-font">sta<span class="serif-char">r</span>ve</span> the old machine
+            </h1>
+        </section>
+
+        <!-- System Overview -->
+        <section class="system-overview">
+            <h2 class="section-title">The Ma<span class="serif-char">r</span>row System</h2>
+            <div class="system-grid">
+                <div class="system-point">
+                    <div class="point-number">01</div>
+                    <div class="point-content">
+                        <h3>Tax spending, not wages</h3>
+                        <p>A progressive consumption tax replaces most income tax, so the more you buy, the higher your rate, while savings and investment stay untouched. Instead of punishing work, we tax consumption—encouraging saving and investing while making luxury spending fund public goods.</p>
+                    </div>
+                </div>
+                <div class="system-point">
+                    <div class="point-number">02</div>
+                    <div class="point-content">
+                        <h3>Tax land, not buildings</h3>
+                        <p>An annual land-value tax captures unearned location gains and is almost impossible to dodge or distort. Property owners pay based on their land's value, not what they build on it—incentivizing development while making land speculation unprofitable.</p>
+                    </div>
+                </div>
+                <div class="system-point">
+                    <div class="point-number">03</div>
+                    <div class="point-content">
+                        <h3>Price pollution and trading churn</h3>
+                        <p>Add a carbon fee that is rebated to everyone and a tiny securities-settlement levy. Environmental costs get priced in while excessive financial trading faces friction. The carbon fee goes straight back to citizens as dividends.</p>
+                    </div>
+                </div>
+                <div class="system-point">
+                    <div class="point-number">04</div>
+                    <div class="point-content">
+                        <h3>AI autopilot</h3>
+                        <p>An open-source algorithm watches inequality, demographics, and emissions, then nudges the tax bands every quarter; any change is logged on a public Git ledger. No political games—just data-driven adjustments that anyone can verify and audit.</p>
+                    </div>
+                </div>
+                <div class="system-point">
+                    <div class="point-number">05</div>
+                    <div class="point-content">
+                        <h3>Universal give-back</h3>
+                        <p>Revenue funds free healthcare, K-14 schooling, childcare, and a sliding cash credit, plus a citizen dividend invested in a national fund. Everyone gets the basics covered, with additional support scaling based on need and a universal dividend for all.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="system-result">
+                <strong><span class="mixed-font">R<span class="serif-char">e</span>sult:</span></strong> Nordic-level equality with lower payroll taxes and full on-chain transparency.
+            </div>
+        </section>
+
+        <!-- Waitlist Section -->
+        <section class="waitlist">
+            <h2 class="section-title">Join the <span class="mixed-font">M<span class="serif-char">o</span>vement</span></h2>
+            <div class="waitlist-content">
+                <div class="user-count-container">
+                    <div class="status-indicator"></div>
+                    <div id="user-count" class="user-count">Loading...</div>
+                </div>
+                <form id="waitlist-form" class="waitlist-form">
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="submit-btn">Join Waitlist</button>
+                </form>
+                <div id="message" class="message"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <button class="whitepaper-btn" onclick="handleWhitepaper()">
+                <span class="mixed-font">R<span class="serif-char">e</span>ad</span> Whitepaper
+            </button>
+        </footer>
     </div>
 
     <script src="script.js"></script>

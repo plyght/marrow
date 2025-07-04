@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 showMessage(data.error || 'Failed to join waitlist', 'error');
             }
         } catch (error) {
+            console.error('Network error:', error);
             showMessage('Network error. Please try again.', 'error');
         } finally {
             // Re-enable button
@@ -53,22 +54,36 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = await response.json();
             
             if (response.ok) {
-                userCountDiv.textContent = `${data.count || 0} people waiting`;
+                const count = data.count || 0;
+                userCountDiv.textContent = `${count} ${count === 1 ? 'person' : 'people'} waiting`;
             } else {
                 userCountDiv.textContent = '0 people waiting';
             }
         } catch (error) {
+            console.error('Error fetching user count:', error);
             userCountDiv.textContent = '0 people waiting';
         }
     }
 
     function showMessage(text, type) {
         messageDiv.textContent = text;
-        messageDiv.className = type;
+        messageDiv.className = `message ${type}`;
         messageDiv.style.display = 'block';
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            hideMessage();
+        }, 5000);
     }
 
     function hideMessage() {
         messageDiv.style.display = 'none';
+        messageDiv.className = 'message';
     }
 });
+
+// Whitepaper button handler
+function handleWhitepaper() {
+    // For now, just show an alert
+    alert('Whitepaper coming soon! Join the waitlist to be notified when it\'s available.');
+}

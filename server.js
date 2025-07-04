@@ -111,11 +111,18 @@ const server = Bun.serve({
       filePath = '/index.html';
     }
 
-    // Remove leading slash and serve from current directory
-    const fullPath = '.' + filePath;
+    // Try to serve from current directory first
+    let fullPath = '.' + filePath;
     
     try {
-      const staticFile = file(fullPath);
+      let staticFile = file(fullPath);
+      if (await staticFile.exists()) {
+        return new Response(staticFile);
+      }
+      
+      // If not found, try public directory
+      fullPath = './public' + filePath;
+      staticFile = file(fullPath);
       if (await staticFile.exists()) {
         return new Response(staticFile);
       }
