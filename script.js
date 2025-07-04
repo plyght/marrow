@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Disable button and show loading
         submitButton.disabled = true;
-        submitButton.textContent = 'Adding...';
+        submitButton.textContent = 'Submitting...';
         hideMessage();
 
         try {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } finally {
             // Re-enable button
             submitButton.disabled = false;
-            submitButton.textContent = 'Join Waitlist';
+            submitButton.textContent = 'Submit';
         }
     });
 

@@ -3,151 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marrow</title>
+    <title>MARROW</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Minimal Background Elements -->
-    <div class="geometric-bg">
-        <div class="geo-shape geo-accent"></div>
-        <div class="geo-shape geo-subtle"></div>
+    <div class="logo">
+        <img src="/Marrow-text.svg" alt="MARROW" />
     </div>
-
-    <!-- Main Layout Grid -->
-    <div class="layout-grid">
-        <!-- Header Zone -->
-        <div class="zone zone-header">
-            <div class="zone-border zone-border-top"></div>
-            <div class="logo-container">
-                <img src="/Marrow-text.svg" alt="Marrow" class="logo">
-            </div>
-            <div class="zone-label">HEADER//</div>
-        </div>
-
-        <!-- Hero Zone (Diagonal) -->
-        <div class="zone zone-hero">
-            <div class="zone-border zone-border-diagonal"></div>
-            <div class="hero-content">
-                <h1 class="tagline-refined">
-                    <span class="word-1">starve</span>
-                    <span class="word-2">the</span>
-                    <span class="word-3">old</span>
-                    <span class="word-4">machine</span>
-                </h1>
-            </div>
-            <div class="zone-label">HERO//</div>
-        </div>
-
-        <!-- System Zone (Asymmetric Grid) -->
-        <div class="zone zone-system">
-            <div class="zone-border zone-border-left"></div>
-            <div class="zone-border zone-border-right"></div>
-            <div class="system-header">
-                <h2 class="section-title-experimental">The Ma<span class="serif-char">r</span>row System</h2>
-                <div class="system-counter">05 POINTS</div>
-            </div>
+    
+    <p class="tagline">starve the old machine</p>
+    
+    <div class="content-wrapper">
+        <div class="system-section">
+            <h2>The System</h2>
             
-            <div class="system-matrix">
-                <div class="matrix-column matrix-left">
-                    <div class="system-card card-1">
-                        <div class="card-border"></div>
-                        <div class="card-number">01</div>
-                        <div class="card-content">
-                            <h3>Tax spending, not wages</h3>
-                            <p>A progressive consumption tax replaces most income tax, so the more you buy, the higher your rate, while savings and investment stay untouched.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="system-card card-3">
-                        <div class="card-border"></div>
-                        <div class="card-number">03</div>
-                        <div class="card-content">
-                            <h3>Price pollution and trading churn</h3>
-                            <p>Add a carbon fee that is rebated to everyone and a tiny securities-settlement levy. Environmental costs get priced in.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="system-card card-5">
-                        <div class="card-border"></div>
-                        <div class="card-number">05</div>
-                        <div class="card-content">
-                            <h3>Universal give-back</h3>
-                            <p>Revenue funds free healthcare, K-14 schooling, childcare, and a sliding cash credit, plus a citizen dividend.</p>
-                        </div>
-                    </div>
-                </div>
+            <ol>
+                <li>
+                    <strong>Tax spending, not wages</strong><br>
+                    Progressive consumption tax replaces most income tax. Buy more, pay more. Savings untouched.
+                </li>
                 
-                <div class="matrix-column matrix-right">
-                    <div class="system-card card-2">
-                        <div class="card-border"></div>
-                        <div class="card-number">02</div>
-                        <div class="card-content">
-                            <h3>Tax land, not buildings</h3>
-                            <p>An annual land-value tax captures unearned location gains and is almost impossible to dodge or distort.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="system-card card-4">
-                        <div class="card-border"></div>
-                        <div class="card-number">04</div>
-                        <div class="card-content">
-                            <h3>AI autopilot</h3>
-                            <p>An open-source algorithm watches inequality, demographics, and emissions, then nudges the tax bands every quarter.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <li>
+                    <strong>Tax land, not buildings</strong><br>
+                    Annual land-value tax captures location gains. Impossible to dodge.
+                </li>
+                
+                <li>
+                    <strong>Price pollution and trading churn</strong><br>
+                    Carbon fee rebated to everyone. Securities levy. Environmental costs priced in.
+                </li>
+                
+                <li>
+                    <strong>AI autopilot</strong><br>
+                    Open-source algorithm watches inequality, demographics, emissions. Nudges tax bands quarterly.
+                </li>
+                
+                <li>
+                    <strong>Universal give-back</strong><br>
+                    Revenue funds healthcare, K-14 schooling, childcare, cash credit, citizen dividend.
+                </li>
+            </ol>
             
-            <div class="system-result-experimental">
-                <div class="result-border"></div>
-                <div class="result-content">
-                    <span class="result-label">RESULT:</span>
-                    <span class="result-text">Nordic-level equality with lower payroll taxes and full on-chain transparency.</span>
-                </div>
+            <div class="result">
+                <strong>RESULT:</strong> Nordic-level equality with lower payroll taxes and full on-chain transparency.
             </div>
-            <div class="zone-label">SYSTEM//</div>
         </div>
-
-        <!-- Waitlist Zone (Floating) -->
-        <div class="zone zone-waitlist">
-            <div class="zone-border zone-border-floating"></div>
-            <div class="waitlist-experimental">
-                <div class="waitlist-header">
-                    <h2 class="section-title-experimental">Join the <span class="mixed-font">M<span class="serif-char">o</span>vement</span></h2>
-                    <div class="user-count-experimental">
-                        <div class="status-indicator"></div>
-                        <div id="user-count" class="user-count">Loading...</div>
-                    </div>
-                </div>
-                
-                <form id="waitlist-form" class="waitlist-form-experimental">
-                    <div class="input-container">
-                        <input type="email" id="email" placeholder="Enter your email address" required>
-                        <div class="input-border"></div>
-                    </div>
-                    <button type="submit" class="submit-btn-experimental">
-                        <span class="btn-text">Join Waitlist</span>
-                        <div class="btn-border"></div>
-                    </button>
-                </form>
-                <div id="message" class="message"></div>
-            </div>
-            <div class="zone-label">JOIN//</div>
-        </div>
-
-        <!-- Footer Zone -->
-        <div class="zone zone-footer">
-            <div class="zone-border zone-border-bottom"></div>
-            <div class="footer-experimental">
-                <button class="whitepaper-btn-experimental" onclick="handleWhitepaper()">
-                    <span class="mixed-font">R<span class="serif-char">e</span>ad</span> Whitepaper
-                    <div class="btn-geometric-border"></div>
-                </button>
-            </div>
-            <div class="zone-label">EOF//</div>
+        
+        <div class="join-section">
+            <h3>Join Waitlist</h3>
+            
+            <p>Users waiting: <span id="user-count">Loading...</span></p>
+            
+            <form id="waitlist-form">
+                <input type="email" id="email" placeholder="your@email.com" required>
+                <button type="submit">Submit</button>
+            </form>
+            
+            <div id="message"></div>
+            
+            <hr>
+            
+            <p><a href="#" onclick="handleWhitepaper()">Read Whitepaper</a></p>
         </div>
     </div>
 
