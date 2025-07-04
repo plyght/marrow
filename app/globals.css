@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --vascular-navy: #001F3F;
+  --cobalt-pulse: #005BFF;
+  --electric-cyan: #00D9FF;
+  --calcium-ivory: #F4F7FA;
+  --slate-graphite: #2B3138;
+  --infra-hotspot: #FF3763;
+}
+
+@layer base {
+  body {
+    background-color: var(--vascular-navy);
+    color: var(--calcium-ivory);
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    background-color: var(--cobalt-pulse);
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #004BDD;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--calcium-ivory);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--slate-graphite);
+    transition: all 0.2s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--slate-graphite);
+  }
+}
